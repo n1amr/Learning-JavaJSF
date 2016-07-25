@@ -6,11 +6,8 @@
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="learn-java-jsf" />
-          <element id="library" level="application" name="JBoss Weld-2.0.3" />
         </element>
-        <element id="directory" name="lib">
-          <element id="library" level="application" name="Mojarra-2.2" />
-        </element>
+        <element id="directory" name="lib" />
       </element>
     </root>
   </artifact>
