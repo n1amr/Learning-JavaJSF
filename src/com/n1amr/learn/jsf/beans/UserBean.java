@@ -1,10 +1,14 @@
 package com.n1amr.learn.jsf.beans;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+//import javax.faces.bean.ManagedBean;
+//import javax.faces.bean.SessionScoped;
+import javax.enterprise.context.SessionScoped;
+import javax.inject.Named;
 import java.io.Serializable;
 
-@ManagedBean(name = "user")
+//@ManagedBean(name = "user")
+//@SessionScoped
+@Named("user")
 @SessionScoped
 public class UserBean implements Serializable {
 	private String name;

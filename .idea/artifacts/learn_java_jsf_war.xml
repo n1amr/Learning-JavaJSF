@@ -7,7 +7,9 @@
         <element id="directory" name="classes">
           <element id="module-output" name="learn-java-jsf" />
         </element>
-        <element id="directory" name="lib" />
+        <element id="directory" name="lib">
+          <element id="library" level="application" name="cdi-api" />
+        </element>
       </element>
     </root>
   </artifact>
