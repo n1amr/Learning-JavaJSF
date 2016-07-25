@@ -8,24 +8,26 @@
 	<title>Login</title>
 </h:head>
 <h:body>
-	<f:view>
-		<h:form>
-			<table>
-				<tbody>
-				<tr>
-					<td><h:outputLabel value="Name"/></td>
-					<td><h:inputText value="#{user.name}"/></td>
-				</tr>
-				<tr>
-					<td><h:outputLabel value="Password"/></td>
-					<td><h:inputSecret value="#{user.password}"/></td>
-				</tr>
-				<tr>
-					<td><h:commandButton value="Login" action="welcome"/></td>
-				</tr>
-				</tbody>
-			</table>
-		</h:form>
-	</f:view>
+	<h2><h:outputText value="Welcome!"/></h2>
+	<h:form prependId="false">
+		<table>
+			<tbody>
+			<tr>
+				<td><h:outputLabel value="Name"/></td>
+				<td><h:inputText id="name" value="#{user.name}"/></td>
+			</tr>
+			<tr>
+				<td><h:outputLabel value="Password"/></td>
+				<td><h:inputSecret id="password" value="#{user.password}"/></td>
+			</tr>
+			<tr>
+				<td><h:commandButton value="Login">
+					<f:ajax execute="name password" render="out"/>
+				</h:commandButton></td>
+			</tr>
+			</tbody>
+		</table>
+		<p><h:outputText id="out" value="#{user.greeting}"/></p>
+	</h:form>
 </h:body>
 </html>

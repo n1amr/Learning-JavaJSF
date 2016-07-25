@@ -25,4 +25,11 @@ public class UserBean implements Serializable {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
+	public String getGreeting() {
+		if (name == null || name.length() == 0)
+			return "";
+		else
+			return "Welcome AJAX, " + name;
+	}
 }
