@@ -1,14 +1,25 @@
 package com.n1amr.learn.jsf.numberquiz.beans;
 
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+//import javax.faces.bean.ManagedBean;
+//import javax.faces.bean.SessionScoped;
+
+import javax.enterprise.context.Conversation;
+import javax.enterprise.context.ConversationScoped;
+import javax.inject.Inject;
+import javax.inject.Named;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-@ManagedBean
-@SessionScoped
+//@ManagedBean
+//@SessionScoped
+@Named
+@ConversationScoped
 public class QuizBean implements Serializable {
+	private
+	@Inject
+	Conversation conversation;
+
 	private ArrayList<ProblemBean> problems = new ArrayList<>();
 	private int currentIndex;
 	private int score;
@@ -57,9 +68,13 @@ public class QuizBean implements Serializable {
 
 	public void setAnswer(String newValue) {
 		try {
+			if (currentIndex == 0)
+				conversation.begin();
 			int answer = Integer.parseInt(newValue.trim());
 			if (getCurrent().getSolution() == answer) score++;
 			currentIndex = (currentIndex + 1) % problems.size();
+			if (currentIndex == 0)
+				conversation.end();
 		} catch (NumberFormatException ex) {
 		}
 	}

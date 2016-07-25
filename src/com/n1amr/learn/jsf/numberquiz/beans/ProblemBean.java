@@ -1,12 +1,16 @@
 package com.n1amr.learn.jsf.numberquiz.beans;
 
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+//import javax.faces.bean.ManagedBean;
+//import javax.faces.bean.SessionScoped;
+import javax.enterprise.context.SessionScoped;
+import javax.inject.Named;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-@ManagedBean
+//@ManagedBean
+//@SessionScoped
+@Named
 @SessionScoped
 public class ProblemBean implements Serializable {
 	private ArrayList<Integer> sequence;
