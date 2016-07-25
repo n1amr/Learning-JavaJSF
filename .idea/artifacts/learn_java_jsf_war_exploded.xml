@@ -8,7 +8,7 @@
           <element id="module-output" name="learn-java-jsf" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="JSF" />
+          <element id="library" level="project" name="Mojarra-2.2" />
         </element>
       </element>
     </root>
