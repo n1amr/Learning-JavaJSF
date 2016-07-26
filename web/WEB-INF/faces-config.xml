@@ -7,7 +7,7 @@
 	<application>
 		<resource-bundle>
 			<base-name>com.n1amr.learn.jsf.numberquiz.messages</base-name>
-			<var>msgs</var>
+			<var>numberquizMessages</var>
 		</resource-bundle>
 		<locale-config>
 			<default-locale>en</default-locale>

@@ -1,4 +1,4 @@
-package com.n1amr.learn.jsf.beans;
+package com.n1amr.learn.jsf.login.beans;
 
 //import javax.faces.bean.ManagedBean;
 //import javax.faces.bean.SessionScoped;
