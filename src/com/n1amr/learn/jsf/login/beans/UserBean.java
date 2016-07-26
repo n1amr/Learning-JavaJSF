@@ -2,6 +2,7 @@ package com.n1amr.learn.jsf.login.beans;
 
 //import javax.faces.bean.ManagedBean;
 //import javax.faces.bean.SessionScoped;
+
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 import java.io.Serializable;
@@ -35,5 +36,12 @@ public class UserBean implements Serializable {
 			return "";
 		else
 			return "Welcome AJAX, " + name;
+	}
+
+	public String verifyUser() {
+		if (password.equals(name))
+			return "success";
+		else
+			return "fail";
 	}
 }
