@@ -13,7 +13,15 @@
 			<default-locale>en</default-locale>
 			<supported-locale>de</supported-locale>
 		</locale-config>
+
+		<!--Java Quiz-->
+		<resource-bundle>
+			<base-name>com.n1amr.learn.jsf.javaquiz.messages</base-name>
+			<var>javaQuizMessages</var>
+		</resource-bundle>
+
 	</application>
+
 	<navigation-rule>
 		<from-view-id>/login2/index.xhtml</from-view-id>
 		<navigation-case>
